@@ -74,6 +74,7 @@ h2 {
   text-align: center;
   font-weight: 300;
   -moz-appearance: textfield;
+  transition: outline 250ms ease-in, box-shadow 250ms ease-in;
 }
 
 .code::-webkit-outer-spin-button,
@@ -82,10 +83,12 @@ h2 {
   margin: 0;
 }
 
-.code:valid{
+.code:valid, .code:focus-visible{
   border-color: #3498db;
   box-shadow: 0 10px 10px -5px rgba(0,0,0, 0.25);
+  outline: 1px solid #3498db;
 }
+
 
 .code:out-of-range{
   color: red;
